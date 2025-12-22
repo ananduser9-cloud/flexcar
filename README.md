@@ -122,3 +122,48 @@ bundle install
 rails db:create
 rails db:migrate
 rails db:seed
+
+
+### **Seed Data Includes**
+
+- **Brands**  
+- **Categories**  
+- **Quantity-based and weight-based items**  
+- **Sample promotions with rules and actions**  
+
+---
+
+## **Running the Server**
+
+To start the Rails API server:
+
+```bash
+rails server
+
+## **API Examples**
+
+### **1. Add Item to Cart**
+
+**Endpoint**
+
+```bash
+POST /api/v1/carts/:cart_id/cart_items
+
+Payload (quantity-based item)
+
+{
+  "item_id": 2,
+  "quantity": 2
+}
+
+
+Payload (weight-based item, grams)
+
+{
+  "item_id": 3,
+  "quantity": 500
+}
+
+
+Note: For weight-based items, quantity is interpreted as grams.
+
