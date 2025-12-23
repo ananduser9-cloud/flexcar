@@ -186,17 +186,49 @@ http://localhost:3000
 ```
 
 # API Examples
-**1. Add Item to Cart**
+**1. List of items**
 
 Endpoint
 ```bash
+GET /api/v1/items
+```
+
+Response
+```json
+[
+    {
+        "active": true,
+        "brand_id": 3,
+        "category_id": 1,
+        "id": 1,
+        "name": "Item 1",
+        "price": "10.0",
+        "unit_type": "weight"
+    },
+    {
+        "active": true,
+        "brand_id": 5,
+        "category_id": 4,
+        "id": 2,
+        "name": "Item 2",
+        "price": "15.0",
+        "unit_type": "quantity"
+    }
+]
+```
+
+**2. Add Item to Cart**
+
+Endpoint
+```bash
+POST /api/v1/carts/new/cart_items
 POST /api/v1/carts/:cart_id/cart_items
 ```
 
 Payload (quantity-based item)
 ```json
 {
-  "item_id": 2,
+  "item_id": 2,(item ids you can get from above API 1)
   "quantity": 2
 }
 ```
@@ -211,7 +243,7 @@ Payload (weight-based item, grams)
 
 Note: For weight-based items, quantity is interpreted as grams.
 
-**2. View Cart**
+**3. View Cart**
 
 Endpoint
 ```bash
@@ -220,24 +252,35 @@ GET /api/v1/carts/:id
 
 Response Example
 ```json
+
 {
-  "cart_id": 1,
-  "total_price": 12.0,
+  "cart_id": 5,
   "items": [
     {
-      "cart_item_id": 3,
-      "item_id": 2,
-      "name": "Almonds",
+      "cart_item_id": 4,
+      "item_id": 3,
+      "name": "Item 3",
+      "quantity": 5.0,
+      "unit_type": "quantity",
+      "final_price": 100.0,
+      "applied_promotion": "Buy 2 Get 1 Free"
+    },
+    {
+      "cart_item_id": 6,
+      "item_id": 1,
+      "name": "Item 1",
+      "quantity": 10.0,
       "unit_type": "weight",
-      "unit": "gram",
-      "quantity": 200,
-      "price": 2.0,
-      "applied_promotion": "Almond Weight Discount"
+      "final_price": 90.0,
+      "applied_promotion": null
     }
-  ]
+  ],
+  "total_price": 190.0
 }
+
+
 ```
-**3. Remove Item from Cart**
+**4. Remove Item from Cart**
 
 Endpoint
 ```bash
