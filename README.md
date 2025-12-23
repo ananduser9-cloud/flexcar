@@ -268,4 +268,14 @@ Response Example
 - One promotion per item – avoids unpredictable discount stacking
 - Rails Omakase RuboCop config – prioritizes consistency over stylistic debates
 
+**Conclusion**
+
+This solution prioritizes:
+
+- Clarity over cleverness
+- Explicit data over assumptions
+- Predictable pricing behavior
+- Clean separation of concerns
+
+The system is intentionally designed to be easy to extend without rewriting core pricing logic.
 
