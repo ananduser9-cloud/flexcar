@@ -251,4 +251,21 @@ Response Example
 ```
 
 
+**Assumptions Made**
+
+- Weight is normalized to grams
+- Item price represents price per base unit
+- Taxes are intentionally excluded
+- Cart belongs to a single logical session/user
+- Inventory stock management is out of scope
+- No authentication or authorization is included
+
+**Why Certain Choices Were Made**
+
+- Single quantity column – avoids schema bloat and keeps promotion logic uniform
+- Service-based pricing – keeps controllers simple and testable
+- Explicit units – prevents silent pricing bugs
+- One promotion per item – avoids unpredictable discount stacking
+- Rails Omakase RuboCop config – prioritizes consistency over stylistic debates
+
 
