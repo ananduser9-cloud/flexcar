@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  promotion: one
+  rule_type: 1
+  reference_id: 1
+  min_value: 9.99
+
+two:
+  promotion: two
+  rule_type: 1
+  reference_id: 1
+  min_value: 9.99
