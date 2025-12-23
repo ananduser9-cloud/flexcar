@@ -293,6 +293,28 @@ Response Example
 }
 ```
 
+# Running Specs
+
+**Run all tests**
+
+```bash
+bundle exec rspec
+```
+
+**What Is Covered by RSpec**
+
+- View Cart
+- Add Item to Cart
+- Remove Item from Cart
+
+**Each test verifies**
+
+- Correct HTTP status
+- Cart items returned
+- Pomotions applied correctly
+- Best possible price calculation
+- Updated total_price
+
 
 **Assumptions Made**
 
