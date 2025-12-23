@@ -96,7 +96,7 @@ This aligns with the B2B platform requirement and keeps the system frontend-agno
 
 ### **Requirements**
 
-- Ruby **3.x**  
+- Ruby **3.3.8**  
 - Rails **8**  
 - PostgreSQL  
 
