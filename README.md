@@ -149,10 +149,14 @@ cd flexcar
 Run the following commands to set up the project:
 
 ```bash
+# Install Ruby version 3.3.8
+rvm install 3.3.8
+rvm use 3.3.8
+
 # Install Ruby gems
 bundle install
 
-# Create the database
+# Create the database (change the database username & password in database.yml file)
 rails db:create
 
 # Run migrations
