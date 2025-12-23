@@ -124,7 +124,6 @@ almonds = Item.create!(
   category: category,
   brand: brand,
   unit_type: :weight,
-  unit: "gram",
   price: 0.02, # ₹0.02 per gram
   active: true
 )
