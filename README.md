@@ -221,6 +221,7 @@ Response
 
 Endpoint
 ```bash
+POST /api/v1/carts/new/cart_items
 POST /api/v1/carts/:cart_id/cart_items
 ```
 
@@ -242,7 +243,7 @@ Payload (weight-based item, grams)
 
 Note: For weight-based items, quantity is interpreted as grams.
 
-**2. View Cart**
+**3. View Cart**
 
 Endpoint
 ```bash
@@ -268,7 +269,7 @@ Response Example
   ]
 }
 ```
-**3. Remove Item from Cart**
+**4. Remove Item from Cart**
 
 Endpoint
 ```bash
