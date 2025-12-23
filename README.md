@@ -279,3 +279,8 @@ This solution prioritizes:
 
 The system is intentionally designed to be easy to extend without rewriting core pricing logic.
 
+**Final Thoughts**
+
+This project focuses on clean domain modeling, predictable promotion logic, and API clarity rather than UI concerns.
+
+Controllers are thin, business logic lives in services, and data integrity is enforced at the database and model layers.
