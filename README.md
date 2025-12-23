@@ -186,7 +186,38 @@ http://localhost:3000
 ```
 
 # API Examples
-**1. Add Item to Cart**
+**1. List of items**
+
+Endpoint
+```bash
+GET /api/v1/items
+```
+
+Response
+```json
+[
+    {
+        "active": true,
+        "brand_id": 3,
+        "category_id": 1,
+        "id": 1,
+        "name": "Item 1",
+        "price": "10.0",
+        "unit_type": "weight"
+    },
+    {
+        "active": true,
+        "brand_id": 5,
+        "category_id": 4,
+        "id": 2,
+        "name": "Item 2",
+        "price": "15.0",
+        "unit_type": "quantity"
+    }
+]
+```
+
+**2. Add Item to Cart**
 
 Endpoint
 ```bash
@@ -196,7 +227,7 @@ POST /api/v1/carts/:cart_id/cart_items
 Payload (quantity-based item)
 ```json
 {
-  "item_id": 2,
+  "item_id": 2,(item ids you can get from above API 1)
   "quantity": 2
 }
 ```
