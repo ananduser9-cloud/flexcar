@@ -20,7 +20,7 @@ The system favors **explicit data over implicit assumptions**, especially for we
 
 ## **Key Design Decisions**
 
-### **1. Quantity vs Weight Items**
+### **Quantity vs Weight Items**
 
 Items can be sold either by:
 
@@ -41,20 +41,7 @@ This avoids duplicating columns while keeping logic centralized.
 
 ---
 
-### **2. Explicit Units for Weight Pricing**
-
-To avoid ambiguity (grams vs kilograms), weight-based items store:
-
-- `unit` (e.g., `gram`, `kg`)  
-
-Pricing is **normalized internally to grams**, ensuring:
-
-- Consistent promotion evaluation  
-- Predictable pricing calculations  
-
----
-
-### **3. Categories & Brands**
+### **Categories & Brands**
 
 - Items belong to **one category** and **one brand**  
 - Categories are used directly in promotion rules  
@@ -62,7 +49,7 @@ Pricing is **normalized internally to grams**, ensuring:
 
 ---
 
-### **4. Promotion Architecture**
+### **Promotion Architecture**
 
 Promotions are split into three components:
 
@@ -82,7 +69,7 @@ Only **one promotion can apply per item**, but multiple items in a cart may each
 
 ---
 
-### **5. Promotion Evaluation Strategy**
+### **Promotion Evaluation Strategy**
 
 - Each cart item is evaluated independently  
 - All eligible promotions are considered  
@@ -93,7 +80,7 @@ This avoids unnecessary full-cart recalculations.
 
 ---
 
-### **6. API-Only Architecture**
+### **API-Only Architecture**
 
 The application is built in **Rails API mode**:
 
