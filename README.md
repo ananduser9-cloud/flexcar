@@ -194,7 +194,7 @@ POST /api/v1/carts/:cart_id/cart_items
 ```
 
 Payload (quantity-based item)
-```bash
+```json
 {
   "item_id": 2,
   "quantity": 2
@@ -202,7 +202,7 @@ Payload (quantity-based item)
 ```
 
 Payload (weight-based item, grams)
-```bash
+```json
 {
   "item_id": 3,
   "quantity": 500
@@ -219,7 +219,7 @@ GET /api/v1/carts/:id
 ```
 
 Response Example
-```bash
+```json
 {
   "cart_id": 1,
   "total_price": 12.0,
@@ -244,7 +244,7 @@ Endpoint
 DELETE /api/v1/carts/:cart_id/cart_items/:id
 ```
 Response Example
-```bash
+```json
 {
   "message": "Item removed from cart"
 }
