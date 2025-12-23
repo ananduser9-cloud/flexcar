@@ -10,6 +10,8 @@ Rails.application.routes.draw do
   # config/routes.rb
   namespace :api do
     namespace :v1 do
+      resources :items, only: [ :index ]
+
       resources :carts, only: [ :show ] do
         resources :cart_items, only: [ :create, :destroy ]
       end

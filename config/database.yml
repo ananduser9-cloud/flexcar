@@ -54,4 +54,8 @@ development:
   <<: *default
   database: flexcar
 
+test:
+  <<: *default
+  database: flexcar_test
+
 

@@ -50,4 +50,8 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
 
   gem "byebug"
+
+  gem "rspec-rails", "~> 6.0"
+
+  gem "factory_bot_rails", group: [ :development, :test ]
 end

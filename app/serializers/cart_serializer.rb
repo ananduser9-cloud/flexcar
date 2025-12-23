@@ -21,10 +21,9 @@ class CartSerializer
         item_id: ci.item.id,
         name: ci.item.name,
         unit_type: ci.item.unit_type,
-        unit: ci.item.unit,
         quantity: ci.quantity,
-        price: ci.final_price,
-        applied_promotion: ci.promotion_name
+        final_price: ci.final_price,
+        applied_promotion: ci.applied_promotion&.name
       }
     end
   end
