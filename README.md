@@ -252,22 +252,33 @@ GET /api/v1/carts/:id
 
 Response Example
 ```json
+
 {
-  "cart_id": 1,
-  "total_price": 12.0,
+  "cart_id": 5,
   "items": [
     {
-      "cart_item_id": 3,
-      "item_id": 2,
-      "name": "Almonds",
+      "cart_item_id": 4,
+      "item_id": 3,
+      "name": "Item 3",
+      "quantity": 5.0,
+      "unit_type": "quantity",
+      "final_price": 100.0,
+      "applied_promotion": "Buy 2 Get 1 Free"
+    },
+    {
+      "cart_item_id": 6,
+      "item_id": 1,
+      "name": "Item 1",
+      "quantity": 10.0,
       "unit_type": "weight",
-      "unit": "gram",
-      "quantity": 200,
-      "price": 2.0,
-      "applied_promotion": "Almond Weight Discount"
+      "final_price": 90.0,
+      "applied_promotion": null
     }
-  ]
+  ],
+  "total_price": 190.0
 }
+
+
 ```
 **4. Remove Item from Cart**
 
