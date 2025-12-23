@@ -135,6 +135,15 @@ To check and auto-correct code style violations, run:
 bundle exec rubocop -A
 ```
 
+**Repository Setup**
+
+Clone the Repository
+
+```bash
+git clone https://github.com/ananduser9-cloud/flexcar.git
+cd flexcar
+```
+
 **Installation**
 
 Run the following commands to set up the project:
